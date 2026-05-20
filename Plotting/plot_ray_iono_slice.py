@@ -118,7 +118,7 @@ def plot_ray_iono_slice(iono_grid, start_range, end_range, range_inc,
 
 
     
-    app = QApplication(sys.argv)
+    app = QApplication.instance() or QApplication(sys.argv)
     screen = app.screens()[0]
     dpi= screen.physicalDotsPerInch()
     scrsz = screen.geometry()
