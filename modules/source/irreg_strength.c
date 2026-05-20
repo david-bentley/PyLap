@@ -29,6 +29,7 @@ PyObject *irreg_strength(PyObject *self, PyObject *args)
   float out = irreg_strength_(&glon, &glat, &year, &ut[1], &ut[2], &ut[3],
       &ut[4], &kp, &dip, &dec);
 
+  free(ut);
   return PyFloat_FromDouble((double)out);
 }
 

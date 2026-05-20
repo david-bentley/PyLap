@@ -69,6 +69,7 @@ static PyObject *igrf2016(PyObject *self, PyObject *args)
   *(double *)PyArray_GETPTR1(output, 8) = dip_lat;
   *(double *)PyArray_GETPTR1(output, 9) = dec;
 
+  free(ut);
   return (PyObject *)output;
 }
 

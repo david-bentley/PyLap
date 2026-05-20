@@ -126,6 +126,7 @@ static PyObject *iri2007(PyObject *self, PyObject *args)
 
   free(outf);
   free(oarr);
+  free(ut);
 
   return PyTuple_Pack(2, py_outf, py_oarr);      
 }

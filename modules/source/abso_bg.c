@@ -90,6 +90,9 @@ static PyObject *abso_bg(PyObject *self, PyObject *args)
     }
   }
 
+  // Cast arrays managed by Python garbage collector, free ut
+  free(ut);
+
   return result;
 }
 

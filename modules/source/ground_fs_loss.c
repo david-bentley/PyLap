@@ -69,6 +69,7 @@ PyObject *ground_fs_loss(PyObject *self, PyObject *args)
     *tmp = forward_scatter_loss_(&lat, &lon, &elev, &freq);
   }
 
+  // Cast arrays are managed by Python garbage collector
   return (PyObject *)result;
 }
 

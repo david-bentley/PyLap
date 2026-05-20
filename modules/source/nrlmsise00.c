@@ -132,6 +132,9 @@ static PyObject *nrlmsise00(PyObject *self, PyObject *args)
     free(temp);
   }
 
+  // Free ut (cast arrays managed by Python garbage collector)
+  free(ut);
+
   return PyTuple_Pack(2, densities, temps);
 }
 

@@ -34,6 +34,7 @@ PyObject *dop_spread_eq(PyObject *self, PyObject *args)
   float result = dop_spread_eq_(&lon, &lat, &year, &(ut[1]), &(ut[2]), &(ut[3]),
       &(ut[4]), &r12);
 
+  free(ut);
   return PyFloat_FromDouble((double)result);
 }
 

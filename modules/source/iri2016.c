@@ -592,6 +592,7 @@ if(obj!=NULL){
 
   free(outf);
   free(oarr);
+  free(ut);
 
   return PyTuple_Pack(2, py_outf, py_oarr);
 }
