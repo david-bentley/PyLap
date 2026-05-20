@@ -206,7 +206,7 @@ static PyObject *raytrace_2d(PyObject *self, PyObject *args)
 
   int *nhops_attempted = (int *)malloc(num_rays * sizeof(int));
   int *npts_in_ray = (int *)malloc(num_rays * sizeof(int));
-  ray_data = (double *)malloc(19 * nhops * num_rays * sizeof(double));
+  ray_data = (double *)malloc(24 * nhops * num_rays * sizeof(double));
   ray_path_data = (double *)malloc(9 * MAX_POINTS_IN_RAY * num_rays * sizeof(double));
 
   int *ray_label = (int *)malloc(nhops * num_rays * sizeof(int));
